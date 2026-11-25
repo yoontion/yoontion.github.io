@@ -1,0 +1,1824 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美俄欧日勘察加半岛地震修正_地震速报修正与复核_勘察加地震观测影像</title>
+<meta name="description" content="寰震影像官方网站，专注美俄欧日勘察加半岛地震修正领域的原创视频与观测记录，提供高清速报复核、震源机制解读与全球台网数据影像，值得信赖的地震科普视频平台。">
+<link rel="icon" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2a'/%3E%3Cpath d='M6 40h12l6-18 8 30 7-22 5 10h14' fill='none' stroke='%233fe0c0' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --hz-ink:#0d1b2a;
+  --hz-ink-2:#152a3e;
+  --hz-ink-3:#1e3a52;
+  --hz-mint:#3fe0c0;
+  --hz-mint-dim:#2bb39a;
+  --hz-amber:#ffb347;
+  --hz-text:#e8f0f5;
+  --hz-text-dim:#9fb3c2;
+  --hz-line:rgba(63,224,192,.18);
+  --hz-card:rgba(255,255,255,.035);
+  --hz-radius:16px;
+  --hz-shadow:0 18px 40px -22px rgba(0,0,0,.85);
+  --hz-head-h:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 600px at 82% -10%, rgba(63,224,192,.14), transparent 60%),
+    radial-gradient(900px 520px at 6% 8%, rgba(255,179,71,.09), transparent 62%),
+    linear-gradient(180deg,#0b1724 0%,#0d1b2a 42%,#0a1521 100%);
+  color:var(--hz-text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.32;font-weight:700;letter-spacing:.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--hz-mint);outline-offset:3px;border-radius:6px}
+
+.hz-shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
+
+/* ============ 吸顶区 ============ */
+.hz-sticky-head{position:sticky;top:0;z-index:80}
+.hz-notice{
+  background:linear-gradient(90deg,#123043,#0f2a3a 55%,#143a44);
+  border-bottom:1px solid var(--hz-line);
+  font-size:13.5px;
+}
+.hz-notice .hz-shell{display:flex;align-items:center;gap:12px;min-height:40px;padding:6px 0;flex-wrap:wrap}
+.hz-notice-tag{
+  flex:none;display:inline-flex;align-items:center;gap:6px;
+  background:rgba(63,224,192,.14);color:var(--hz-mint);
+  border:1px solid rgba(63,224,192,.35);
+  padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.04em;
+}
+.hz-notice-dot{width:6px;height:6px;border-radius:50%;background:var(--hz-mint);animation:hzPulse 1.8s infinite}
+@keyframes hzPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.hz-notice-list{display:flex;gap:18px;flex-wrap:wrap;color:var(--hz-text-dim);min-width:0}
+.hz-notice-list b{color:var(--hz-text);font-weight:600}
+.hz-notice-list a:hover b{color:var(--hz-mint)}
+
+.hz-header{
+  background:rgba(11,23,36,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hz-line);
+}
+.hz-header .hz-shell{display:flex;align-items:center;gap:20px;min-height:70px;padding:10px 0}
+.hz-brand{display:flex;align-items:center;gap:11px;flex:none}
+.hz-brand-mark{
+  width:40px;height:40px;border-radius:11px;flex:none;
+  background:linear-gradient(140deg,#173a4c,#0f2434);
+  border:1px solid rgba(63,224,192,.35);
+  display:grid;place-items:center;
+}
+.hz-brand-name{font-size:18px;font-weight:800;letter-spacing:.02em}
+.hz-brand-sub{display:block;font-size:11px;color:var(--hz-text-dim);letter-spacing:.22em;font-weight:500}
+.hz-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap}
+.hz-nav a{padding:7px 11px;border-radius:9px;font-size:14.5px;color:var(--hz-text-dim);transition:.18s}
+.hz-nav a:hover{color:var(--hz-mint);background:rgba(63,224,192,.08)}
+.hz-head-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.hz-search{position:relative;display:flex;align-items:center}
+.hz-search input{
+  width:216px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  color:var(--hz-text);padding:0 38px 0 13px;font-size:14px;transition:.2s;
+}
+.hz-search input::placeholder{color:#7d92a2}
+.hz-search input:focus{outline:none;border-color:rgba(63,224,192,.65);background:rgba(63,224,192,.07);width:248px}
+.hz-search-btn{position:absolute;right:5px;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:var(--hz-mint)}
+.hz-search-btn:hover{background:rgba(63,224,192,.14)}
+.hz-search-feedback{
+  position:absolute;top:calc(100% + 8px);right:0;width:300px;
+  background:#122534;border:1px solid var(--hz-line);border-radius:12px;
+  padding:10px 13px;font-size:13px;color:var(--hz-text-dim);
+  box-shadow:var(--hz-shadow);display:none;
+}
+.hz-search-feedback.is-open{display:block}
+.hz-search-feedback b{color:var(--hz-mint)}
+.hz-burger{display:none;width:40px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.14);place-items:center;background:rgba(255,255,255,.04)}
+.hz-burger span{display:block;width:17px;height:2px;background:var(--hz-text);border-radius:2px;margin:2.5px 0;transition:.2s}
+.hz-burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hz-burger.is-open span:nth-child(2){opacity:0}
+.hz-burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.hz-mobile-nav{display:none;border-top:1px solid var(--hz-line);padding:8px 0 14px}
+.hz-mobile-nav.is-open{display:block}
+.hz-mobile-nav a{display:block;padding:11px 4px;border-bottom:1px dashed rgba(255,255,255,.07);color:var(--hz-text-dim);font-size:15px}
+.hz-mobile-nav a:last-child{border-bottom:0}
+
+/* ============ 首屏（6:4大幅图文）============ */
+.hz-hero{padding:52px 0 18px;position:relative;overflow:hidden}
+.hz-hero::before{
+  content:"";position:absolute;inset:auto -10% 20% auto;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(63,224,192,.13),transparent 66%);pointer-events:none;
+}
+.hz-hero-grid{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:38px;align-items:center;position:relative}
+.hz-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  color:var(--hz-mint);text-transform:uppercase;font-weight:600;
+  border:1px solid rgba(63,224,192,.3);background:rgba(63,224,192,.07);
+  padding:5px 12px;border-radius:999px;margin-bottom:20px;
+}
+.hz-hero h1{font-size:clamp(30px,4.2vw,52px);line-height:1.16;letter-spacing:-.015em}
+.hz-hero h1 em{font-style:normal;color:var(--hz-mint)}
+.hz-hero-lead{margin-top:18px;font-size:16.5px;color:#c3d5e0;max-width:56ch}
+.hz-hero-desc{margin-top:14px;font-size:15px;color:var(--hz-text-dim);max-width:60ch}
+.hz-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hz-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 22px;border-radius:11px;font-weight:600;font-size:15px;
+  border:1px solid transparent;transition:.2s;
+}
+.hz-btn-primary{background:linear-gradient(135deg,#42e6c5,#22a98d);color:#04231d;box-shadow:0 12px 26px -14px rgba(63,224,192,.9)}
+.hz-btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 32px -14px rgba(63,224,192,.95)}
+.hz-btn-ghost{border-color:rgba(255,255,255,.2);color:var(--hz-text);background:rgba(255,255,255,.04)}
+.hz-btn-ghost:hover{border-color:rgba(63,224,192,.6);color:var(--hz-mint);background:rgba(63,224,192,.08)}
+.hz-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px;border-top:1px solid var(--hz-line);padding-top:20px}
+.hz-stat-num{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.hz-stat-num small{font-size:14px;color:var(--hz-mint);font-weight:600;margin-left:2px}
+.hz-stat-label{font-size:12.5px;color:var(--hz-text-dim);margin-top:2px}
+
+.hz-hero-visual{position:relative}
+.hz-hero-frame{
+  border-radius:22px;overflow:hidden;border:1px solid rgba(63,224,192,.24);
+  background:#0a1521;box-shadow:0 34px 60px -32px rgba(0,0,0,.95);
+}
+.hz-hero-frame svg{display:block;width:100%;height:auto}
+.hz-hero-badge{
+  position:absolute;left:16px;bottom:16px;right:16px;
+  display:flex;align-items:center;gap:10px;
+  background:rgba(9,20,31,.82);backdrop-filter:blur(10px);
+  border:1px solid rgba(63,224,192,.28);border-radius:13px;padding:11px 14px;font-size:13px;
+}
+.hz-hero-badge .hz-live{
+  flex:none;display:inline-flex;align-items:center;gap:5px;color:#0a1a16;background:var(--hz-mint);
+  font-weight:700;font-size:11px;letter-spacing:.08em;padding:2px 8px;border-radius:999px;
+}
+.hz-hero-badge p{color:#cddde6;line-height:1.45}
+
+/* ============ 区块通用 ============ */
+.hz-section{padding:64px 0 8px}
+.hz-section-head{margin-bottom:30px;display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.hz-section-head h2{font-size:clamp(23px,2.7vw,32px);letter-spacing:-.01em}
+.hz-section-head h2 span{color:var(--hz-mint)}
+.hz-section-kicker{display:block;font-size:12.5px;letter-spacing:.2em;color:var(--hz-mint);font-weight:600;margin-bottom:8px;text-transform:uppercase}
+.hz-section-sub{font-size:14.5px;color:var(--hz-text-dim);max-width:62ch;margin-top:8px}
+.hz-section-link{margin-left:auto;font-size:14px;color:var(--hz-mint);display:inline-flex;align-items:center;gap:6px;padding-bottom:2px;border-bottom:1px solid rgba(63,224,192,.35)}
+.hz-section-link:hover{color:#7ff2dd}
+
+/* ============ S3 焦点 + 视频列表 ============ */
+.hz-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;align-items:start}
+.hz-focus-main{
+  border:1px solid var(--hz-line);border-radius:var(--hz-radius);overflow:hidden;
+  background:linear-gradient(180deg,rgba(63,224,192,.06),rgba(255,255,255,.02));
+}
+.hz-focus-main .hz-thumb{aspect-ratio:16/9;background:#0a1521;overflow:hidden}
+.hz-focus-main .hz-thumb svg{width:100%;height:100%;display:block}
+.hz-focus-body{padding:20px 22px 22px}
+.hz-tagrow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.hz-tag{
+  font-size:11.5px;padding:2.5px 9px;border-radius:999px;letter-spacing:.03em;
+  color:var(--hz-mint);background:rgba(63,224,192,.1);border:1px solid rgba(63,224,192,.26);
+}
+.hz-tag.is-amber{color:var(--hz-amber);background:rgba(255,179,71,.1);border-color:rgba(255,179,71,.3)}
+.hz-tag.is-plain{color:var(--hz-text-dim);background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+.hz-focus-main h3{font-size:21px;margin-bottom:10px}
+.hz-focus-main p{font-size:14.5px;color:#b8cad6}
+.hz-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--hz-text-dim);margin-top:14px}
+.hz-meta .hz-avatar-xs{width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:11px;font-weight:700;color:#04231d;background:var(--hz-mint)}
+
+.hz-vlist{display:flex;flex-direction:column;gap:12px}
+.hz-vitem{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;
+  padding:15px 16px;border-radius:13px;border:1px solid rgba(255,255,255,.075);
+  background:var(--hz-card);transition:.2s;
+}
+.hz-vitem:hover{border-color:rgba(63,224,192,.4);background:rgba(63,224,192,.06);transform:translateX(3px)}
+.hz-vitem h3{font-size:15.5px;margin-bottom:5px}
+.hz-vitem p{font-size:13px;color:var(--hz-text-dim);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hz-vitem .hz-vmeta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#8ba0b0;margin-top:8px}
+.hz-vindex{
+  width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;
+  font-size:13px;font-weight:700;color:var(--hz-mint);background:rgba(63,224,192,.1);border:1px solid rgba(63,224,192,.25);
+}
+.hz-ops{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.hz-op{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--hz-text-dim);
+  padding:4px 9px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);
+  transition:.18s;font-variant-numeric:tabular-nums;
+}
+.hz-op:hover{color:var(--hz-mint);border-color:rgba(63,224,192,.45);background:rgba(63,224,192,.08)}
+.hz-op.is-liked{color:var(--hz-mint);border-color:rgba(63,224,192,.55);background:rgba(63,224,192,.13)}
+.hz-op.is-saved{color:var(--hz-amber);border-color:rgba(255,179,71,.5);background:rgba(255,179,71,.1)}
+.hz-op svg{flex:none}
+
+/* ============ 通用卡片网格 ============ */
+.hz-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.hz-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.hz-card{
+  border:1px solid rgba(255,255,255,.08);border-radius:var(--hz-radius);
+  background:var(--hz-card);padding:0;overflow:hidden;transition:.22s;
+}
+.hz-card:hover{border-color:rgba(63,224,192,.32);transform:translateY(-3px);box-shadow:var(--hz-shadow)}
+.hz-card .hz-thumb{aspect-ratio:16/9;overflow:hidden;background:#0a1521}
+.hz-card .hz-thumb svg{width:100%;height:100%;display:block}
+.hz-card-body{padding:16px 18px 18px}
+.hz-card-body h3{font-size:16.5px;margin-bottom:8px}
+.hz-card-body p{font-size:13.5px;color:var(--hz-text-dim)}
+.hz-card-meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#8ba0b0;margin-top:12px;border-top:1px dashed rgba(255,255,255,.09);padding-top:10px;flex-wrap:wrap}
+
+/* ============ 关键词解析 / 品牌故事 ============ */
+.hz-article{max-width:78ch}
+.hz-article h3{font-size:19px;margin:26px 0 10px;color:#e4f2f7;position:relative;padding-left:14px}
+.hz-article h3::before{content:"";position:absolute;left:0;top:.42em;width:5px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--hz-mint),var(--hz-mint-dim))}
+.hz-article h3:first-child{margin-top:0}
+.hz-article p{font-size:15px;color:#bccfd9;margin-bottom:12px}
+.hz-article strong{color:#eaf6fa;font-weight:600}
+.hz-article .hz-quote{
+  margin:16px 0;padding:14px 18px;border-left:3px solid var(--hz-mint);
+  background:rgba(63,224,192,.06);border-radius:0 12px 12px 0;font-size:14.5px;color:#c7dbe4;
+}
+.hz-article .hz-quote b{color:var(--hz-mint)}
+.hz-article-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:34px;align-items:start}
+.hz-aside-card{
+  border:1px solid var(--hz-line);border-radius:var(--hz-radius);
+  background:linear-gradient(180deg,rgba(63,224,192,.07),rgba(255,255,255,.02));
+  padding:20px 20px 22px;position:sticky;top:calc(var(--hz-head-h) + 18px);
+}
+.hz-aside-card h4{font-size:15px;color:var(--hz-mint);letter-spacing:.06em;margin-bottom:14px}
+.hz-aside-list{display:flex;flex-direction:column;gap:12px}
+.hz-aside-list li{font-size:13.5px;color:var(--hz-text-dim);display:flex;gap:9px;line-height:1.6}
+.hz-aside-list li b{color:#eaf6fa;font-weight:600;display:block;font-size:13.5px}
+.hz-aside-list .hz-dot{width:7px;height:7px;border-radius:50%;background:var(--hz-mint);flex:none;margin-top:8px}
+
+/* ============ 专题 ============ */
+.hz-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.hz-topic{
+  border:1px solid rgba(255,255,255,.09);border-radius:var(--hz-radius);
+  background:linear-gradient(170deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  padding:20px;display:flex;flex-direction:column;gap:12px;transition:.2s;
+}
+.hz-topic:hover{border-color:rgba(63,224,192,.35);background:rgba(63,224,192,.055)}
+.hz-topic-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.hz-topic h3{font-size:17px}
+.hz-topic-status{flex:none;font-size:11.5px;padding:2.5px 9px;border-radius:999px;background:rgba(63,224,192,.13);border:1px solid rgba(63,224,192,.32);color:var(--hz-mint);white-space:nowrap}
+.hz-topic-status.is-amber{color:var(--hz-amber);background:rgba(255,179,71,.1);border-color:rgba(255,179,71,.32)}
+.hz-topic p{font-size:13.5px;color:var(--hz-text-dim)}
+.hz-topic ul{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+.hz-topic li{font-size:13px;color:#a9c0cd;padding-left:14px;position:relative;line-height:1.55}
+.hz-topic li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:1px;background:rgba(63,224,192,.7)}
+
+/* ============ 作者矩阵（双列简介）============ */
+.hz-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.hz-author{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;
+  padding:20px;border-radius:var(--hz-radius);border:1px solid rgba(255,255,255,.08);
+  background:var(--hz-card);transition:.2s;
+}
+.hz-author:hover{border-color:rgba(63,224,192,.34);background:rgba(63,224,192,.05)}
+.hz-avatar{width:64px;height:64px;border-radius:16px;overflow:hidden;flex:none;border:1px solid rgba(255,255,255,.14)}
+.hz-avatar svg{width:100%;height:100%;display:block}
+.hz-author h3{font-size:16.5px;margin-bottom:3px}
+.hz-author-role{font-size:12.5px;color:var(--hz-mint);margin-bottom:8px}
+.hz-author p{font-size:13px;color:var(--hz-text-dim);line-height:1.68}
+.hz-author-stats{display:flex;gap:14px;font-size:12px;color:#8ba0b0;margin-top:10px;flex-wrap:wrap}
+.hz-author-stats b{color:#e6f3f8;font-weight:600}
+.hz-author-more{margin-top:9px;font-size:12.5px;color:var(--hz-mint);border:0;padding:0;background:none;display:inline-flex;align-items:center;gap:4px}
+.hz-author-more:hover{color:#7ff2dd;text-decoration:underline}
+
+/* ============ 评论（双列短评）============ */
+.hz-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hz-review{
+  padding:16px 18px;border-radius:13px;border:1px solid rgba(255,255,255,.075);
+  background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
+  display:flex;flex-direction:column;gap:9px;transition:.2s;
+}
+.hz-review:hover{border-color:rgba(63,224,192,.28)}
+.hz-review-head{display:flex;align-items:center;gap:10px}
+.hz-review-head .hz-avatar-xs{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#04231d;flex:none}
+.hz-review-name{font-size:13.5px;font-weight:600}
+.hz-review-when{font-size:11.5px;color:#7d92a2;margin-left:auto;white-space:nowrap}
+.hz-review p{font-size:13.5px;color:#bacfda;line-height:1.68}
+.hz-review-tags{display:flex;gap:6px;flex-wrap:wrap}
+.hz-review-tags span{font-size:11px;color:var(--hz-text-dim);border:1px solid rgba(255,255,255,.12);padding:1px 7px;border-radius:999px}
+
+/* ============ 榜单 ============ */
+.hz-rank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.hz-rank-col{border:1px solid rgba(255,255,255,.09);border-radius:var(--hz-radius);padding:18px;background:var(--hz-card)}
+.hz-rank-col h3{font-size:15px;color:var(--hz-mint);letter-spacing:.05em;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.hz-rank-col ol{display:flex;flex-direction:column;gap:9px;counter-reset:hzr}
+.hz-rank-col li{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:9px;align-items:center;font-size:13px;color:#b8cad6}
+.hz-rank-col li::before{
+  counter-increment:hzr;content:counter(hzr);
+  width:20px;height:20px;border-radius:6px;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:var(--hz-mint);background:rgba(63,224,192,.12);
+}
+.hz-rank-col li:nth-child(-n+3)::before{background:rgba(255,179,71,.16);color:var(--hz-amber)}
+.hz-rank-col li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hz-rank-col li em{font-style:normal;font-size:11.5px;color:#7d92a2;font-variant-numeric:tabular-nums}
+
+/* ============ 数据卡 ============ */
+.hz-data-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.hz-data-item{border:1px solid var(--hz-line);border-radius:13px;padding:16px;background:rgba(63,224,192,.045)}
+.hz-data-item b{display:block;font-size:23px;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.hz-data-item span{font-size:12.5px;color:var(--hz-text-dim)}
+
+/* ============ 企业动态 ============ */
+.hz-newslist{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.08)}
+.hz-newslist li{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:16px;align-items:center;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.08);transition:.18s}
+.hz-newslist li:hover{background:rgba(63,224,192,.045)}
+.hz-news-date{font-size:12.5px;color:var(--hz-mint);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.hz-newslist h3{font-size:14.5px;font-weight:600}
+.hz-newslist p{font-size:12.5px;color:var(--hz-text-dim);margin-top:3px}
+.hz-news-cat{font-size:11.5px;color:var(--hz-text-dim);border:1px solid rgba(255,255,255,.12);padding:2px 9px;border-radius:999px;white-space:nowrap}
+
+/* ============ 合作墙 ============ */
+.hz-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.hz-partner{
+  border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:16px 14px;
+  background:rgba(255,255,255,.028);text-align:center;transition:.2s;
+}
+.hz-partner:hover{border-color:rgba(63,224,192,.35);background:rgba(63,224,192,.055)}
+.hz-partner b{display:block;font-size:14px;color:#e6f3f8;margin-bottom:3px}
+.hz-partner span{font-size:11.5px;color:var(--hz-text-dim)}
+
+/* ============ FAQ ============ */
+.hz-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hz-faq details{
+  border:1px solid rgba(255,255,255,.09);border-radius:12px;background:var(--hz-card);
+  padding:0;overflow:hidden;transition:.2s;
+}
+.hz-faq details[open]{border-color:rgba(63,224,192,.38);background:rgba(63,224,192,.055)}
+.hz-faq summary{
+  cursor:pointer;list-style:none;padding:15px 46px 15px 17px;font-size:14.5px;font-weight:600;
+  position:relative;line-height:1.5;
+}
+.hz-faq summary::-webkit-details-marker{display:none}
+.hz-faq summary::after{
+  content:"+";position:absolute;right:17px;top:50%;transform:translateY(-50%);
+  color:var(--hz-mint);font-size:19px;font-weight:400;line-height:1;
+}
+.hz-faq details[open] summary::after{content:"−"}
+.hz-faq .hz-faq-body{padding:0 17px 16px;font-size:13.5px;color:var(--hz-text-dim);line-height:1.72}
+
+/* ============ 投稿 + 联系 ============ */
+.hz-cta{
+  border-radius:20px;border:1px solid rgba(63,224,192,.3);
+  background:
+    radial-gradient(600px 260px at 88% 0%, rgba(63,224,192,.18), transparent 70%),
+    linear-gradient(150deg,#132b3c,#0f2231 60%,#133039);
+  padding:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;
+}
+.hz-cta h2{font-size:clamp(21px,2.5vw,27px);margin-bottom:10px}
+.hz-cta p{font-size:14.5px;color:#b8cdd9;max-width:60ch}
+.hz-cta-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+/* ============ 页脚 ============ */
+.hz-footer{margin-top:70px;border-top:1px solid var(--hz-line);background:rgba(8,17,27,.72);padding:44px 0 26px}
+.hz-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:30px}
+.hz-footer h4{font-size:13.5px;letter-spacing:.1em;color:var(--hz-mint);margin-bottom:14px}
+.hz-footer p{font-size:13px;color:var(--hz-text-dim);line-height:1.8}
+.hz-footer-links{display:flex;flex-direction:column;gap:9px}
+.hz-footer-links a{font-size:13px;color:var(--hz-text-dim);transition:.18s}
+.hz-footer-links a:hover{color:var(--hz-mint)}
+.hz-footer-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  font-size:12.5px;color:#7d92a2;
+}
+.hz-footer-bottom .hz-legal{display:flex;gap:16px;flex-wrap:wrap}
+
+/* ============ 回到顶部 / Toast / 弹窗 ============ */
+.hz-top{
+  position:fixed;right:22px;bottom:26px;z-index:90;
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(19,43,60,.95);border:1px solid rgba(63,224,192,.4);color:var(--hz-mint);
+  box-shadow:0 14px 30px -14px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:.25s;
+}
+.hz-top.is-show{opacity:1;visibility:visible;transform:none}
+.hz-top:hover{background:rgba(63,224,192,.16)}
+
+.hz-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(11,26,38,.97);border:1px solid rgba(63,224,192,.45);color:#e8f6fa;
+  padding:11px 20px;border-radius:11px;font-size:13.5px;z-index:120;
+  box-shadow:0 20px 40px -18px rgba(0,0,0,.95);opacity:0;visibility:hidden;transition:.24s;
+  max-width:min(86vw,420px);text-align:center;
+}
+.hz-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+.hz-modal{
+  position:fixed;inset:0;z-index:130;display:none;place-items:center;padding:24px;
+  background:rgba(4,10,16,.72);backdrop-filter:blur(4px);
+}
+.hz-modal.is-open{display:grid}
+.hz-modal-panel{
+  width:min(560px,100%);max-height:82vh;overflow:auto;border-radius:18px;
+  background:linear-gradient(170deg,#132a3b,#0d1e2c);
+  border:1px solid rgba(63,224,192,.35);padding:26px;box-shadow:0 30px 70px -30px #000;
+}
+.hz-modal-panel h3{font-size:19px;margin-bottom:6px}
+.hz-modal-sub{font-size:13px;color:var(--hz-text-dim);margin-bottom:18px}
+.hz-field{margin-bottom:14px}
+.hz-field label{display:block;font-size:12.5px;color:var(--hz-mint);margin-bottom:6px;letter-spacing:.04em}
+.hz-field input,.hz-field textarea,.hz-field select{
+  width:100%;border-radius:10px;background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.15);color:var(--hz-text);
+  padding:10px 12px;font-size:14px;font-family:inherit;transition:.2s;
+}
+.hz-field textarea{min-height:96px;resize:vertical}
+.hz-field input:focus,.hz-field textarea:focus,.hz-field select:focus{
+  outline:none;border-color:rgba(63,224,192,.65);background:rgba(63,224,192,.07);
+}
+.hz-field select option{background:#12293a;color:#e8f0f5}
+.hz-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+.hz-modal .hz-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  display:grid;place-items:center;color:var(--hz-text-dim);font-size:20px;line-height:1;
+}
+.hz-modal .hz-close:hover{color:var(--hz-mint);background:rgba(63,224,192,.1)}
+.hz-modal-rel{position:relative}
+.hz-share-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.hz-share-btn{
+  border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:12px 10px;
+  background:rgba(255,255,255,.04);font-size:13px;text-align:center;transition:.2s;
+}
+.hz-share-btn:hover{border-color:rgba(63,224,192,.5);background:rgba(63,224,192,.1);color:var(--hz-mint)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .hz-hero-grid{grid-template-columns:1fr;gap:30px}
+  .hz-focus-grid{grid-template-columns:1fr}
+  .hz-article-grid{grid-template-columns:1fr}
+  .hz-aside-card{position:static}
+  .hz-topic-grid,.hz-rank{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hz-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hz-data-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hz-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  :root{--hz-head-h:106px}
+  .hz-nav{display:none}
+  .hz-burger{display:grid}
+  .hz-head-tools .hz-search{display:none}
+  .hz-head-tools .hz-btn{display:none}
+  .hz-grid-3,.hz-author-grid,.hz-review-grid,.hz-faq,.hz-grid-2{grid-template-columns:1fr}
+  .hz-cta{grid-template-columns:1fr;padding:26px}
+  .hz-cta-actions{justify-content:flex-start}
+  .hz-section{padding:48px 0 6px}
+}
+@media (max-width:600px){
+  .hz-shell{width:calc(100% - 28px)}
+  .hz-hero{padding:34px 0 6px}
+  .hz-hero-stats{grid-template-columns:1fr 1fr}
+  .hz-topic-grid,.hz-rank,.hz-partners,.hz-data-strip,.hz-footer-grid{grid-template-columns:minmax(0,1fr)}
+  .hz-newslist li{grid-template-columns:minmax(0,1fr);gap:5px}
+  .hz-news-date{font-size:12px}
+  .hz-news-cat{justify-self:start}
+  .hz-top{right:14px;bottom:16px}
+  .hz-share-row{grid-template-columns:1fr}
+  .hz-brand-sub{letter-spacing:.12em}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- ============ S1 公告条 + 页头（吸顶） ============ -->
+<div class="hz-sticky-head" id="hzTop">
+  <div class="hz-notice" role="region" aria-label="站点公告">
+    <div class="hz-shell">
+      <span class="hz-notice-tag"><i class="hz-notice-dot"></i>最新修正</span>
+      <div class="hz-notice-list">
+        <a href="#hzFocus"><b>勘察加半岛 M7.2 速报二版已发布</b>：美俄欧日四方台网联合复算，震源深度由 38km 修正为 51km。</a>
+        <a href="#hzNews"><b>11 月 22 日更新</b>：新增日本气象厅与欧洲 EMSC 的震级对照影像 4 条。</a>
+        <a href="#hzTopic"><b>专题开放</b>：「跨境地震修正」企划开放投稿报名。</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hz-header">
+    <div class="hz-shell">
+      <a class="hz-brand" href="#hzTop" aria-label="寰震影像官方网站首页">
+        <span class="hz-brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M2 21h6l4-12 5 19 4-14 3 7h6" stroke="#3fe0c0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>
+          <span class="hz-brand-name">寰震影像</span>
+          <span class="hz-brand-sub">GLOBAL QUAKE VISION</span>
+        </span>
+      </a>
+
+      <nav class="hz-nav" aria-label="主导航">
+        <a href="#hzFocus">焦点速报</a>
+        <a href="#hzVideo">视频档案</a>
+        <a href="#hzTopic">专题企划</a>
+        <a href="#hzAuthor">创作者</a>
+        <a href="#hzReview">社区口碑</a>
+        <a href="#hzFaq">帮助中心</a>
+      </nav>
+
+      <div class="hz-head-tools">
+        <div class="hz-search">
+          <input id="hzSearchInput" type="search" placeholder="搜索地震修正、台网、震源…" aria-label="站内搜索">
+          <button class="hz-search-btn" id="hzSearchBtn" type="button" aria-label="执行搜索">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.6" stroke="currentColor" stroke-width="2"/>
+              <path d="M16.2 16.4 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="hz-search-feedback" id="hzSearchFeedback" role="status" aria-live="polite"></div>
+        </div>
+        <a class="hz-btn hz-btn-primary" href="#hzSubmit" style="padding:9px 18px;font-size:14px">投稿报名</a>
+        <button class="hz-burger" id="hzBurger" type="button" aria-label="展开移动端导航" aria-expanded="false" aria-controls="hzMobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="hz-mobile-nav" id="hzMobileNav" aria-label="移动端导航">
+      <div class="hz-shell">
+        <a href="#hzFocus">焦点速报</a>
+        <a href="#hzVideo">视频档案</a>
+        <a href="#hzArticle">关键词解析</a>
+        <a href="#hzTopic">专题企划</a>
+        <a href="#hzAuthor">创作者</a>
+        <a href="#hzRank">数据榜单</a>
+        <a href="#hzReview">社区口碑</a>
+        <a href="#hzNews">企业动态</a>
+        <a href="#hzFaq">帮助中心</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main>
+
+<!-- ============ S2 品牌首屏（6:4 大幅图文） ============ -->
+<section class="hz-hero" aria-labelledby="hzHeroTitle">
+  <div class="hz-shell hz-hero-grid">
+    <div class="hz-hero-copy">
+      <span class="hz-eyebrow">官方网站 · 品牌 · 持续运营</span>
+      <h1 id="hzHeroTitle">美俄欧日勘察加半岛地震修正<em>·</em>观测影像官方平台</h1>
+      <p class="hz-hero-lead">寰震影像是一家深耕地震观测与速报复核垂直领域的视频内容企业，为科研机构、应急部门与公众提供原创、高清、可追溯的地震修正影像与数据解读。</p>
+      <p class="hz-hero-desc">我们以美俄欧日四套监测体系对勘察加半岛地震的修正过程为主线，把震级偏差、深度重算、震源机制反演这些专业动作，转译成每一位观众都能看懂的画面语言。作为用户首选的科普影像平台，我们坚持每一条修正结论都可回溯到台站与时刻。</p>
+
+      <div class="hz-hero-actions">
+        <a class="hz-btn hz-btn-primary" href="#hzFocus">
+          观看最新修正速报
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
+        </a>
+        <a class="hz-btn hz-btn-ghost" href="#hzArticle">了解修正逻辑</a>
+        <a class="hz-btn hz-btn-ghost" href="#hzTopic">专题企划</a>
+      </div>
+
+      <div class="hz-hero-stats">
+        <div>
+          <div class="hz-stat-num" data-hz-count="1864">0<small>条</small></div>
+          <div class="hz-stat-label">勘察加相关修正影像档案</div>
+        </div>
+        <div>
+          <div class="hz-stat-num" data-hz-count="27">0<small>家</small></div>
+          <div class="hz-stat-label">合作台网与科研机构</div>
+        </div>
+        <div>
+          <div class="hz-stat-num" data-hz-count="98">0<small>%</small></div>
+          <div class="hz-stat-label">速报复核可追溯率</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hz-hero-visual">
+      <div class="hz-hero-frame">
+        <svg viewBox="0 0 640 460" role="img" aria-label="勘察加半岛俯视地图与四方台网地震波修正示意图">
+          <defs>
+            <linearGradient id="hzHeroSea" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0b2130"/><stop offset="1" stop-color="#123344"/>
+            </linearGradient>
+            <linearGradient id="hzHeroLand" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1d4a52"/><stop offset="1" stop-color="#173b47"/>
+            </linearGradient>
+            <radialGradient id="hzHeroGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#3fe0c0" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#3fe0c0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="640" height="460" fill="url(#hzHeroSea)"/>
+          <!-- 经纬网 -->
+          <g stroke="#3fe0c0" stroke-opacity=".12" stroke-width="1">
+            <path d="M0 92h640M0 184h640M0 276h640M0 368h640"/>
+            <path d="M96 0v460M224 0v460M352 0v460M480 0v460"/>
+          </g>
+          <!-- 半岛轮廓 -->
+          <path d="M252 78c46-16 96 2 120 40 20 32 8 62-10 84-16 20-18 40-6 62 14 26 6 58-24 76-30 18-70 16-96-6-22-18-28-44-20-68 8-22 2-40-16-54-26-20-30-56-10-82 12-16 34-42 62-52Z"
+                fill="url(#hzHeroLand)" stroke="#3fe0c0" stroke-opacity=".5" stroke-width="2"/>
+          <!-- 火山链 -->
+          <g fill="#ffb347">
+            <circle cx="288" cy="128" r="4.5"/><circle cx="310" cy="166" r="4"/><circle cx="300" cy="208" r="5"/>
+            <circle cx="322" cy="248" r="4"/><circle cx="310" cy="292" r="4.5"/><circle cx="284" cy="330" r="3.6"/>
+          </g>
+          <g stroke="#ffb347" stroke-opacity=".45" stroke-width="1.4" fill="none">
+            <path d="M288 128c8-14 24-18 32-6M310 166c8-10 22-14 30-4M300 208c10-12 26-16 34-4"/>
+          </g>
+          <!-- 震中与波纹 -->
+          <circle cx="316" cy="222" r="76" fill="url(#hzHeroGlow)"/>
+          <g stroke="#3fe0c0" fill="none">
+            <circle cx="316" cy="222" r="26" stroke-width="2.2" stroke-opacity=".9"/>
+            <circle cx="316" cy="222" r="50" stroke-width="1.6" stroke-opacity=".55"/>
+            <circle cx="316" cy="222" r="76" stroke-width="1.2" stroke-opacity=".32"/>
+            <circle cx="316" cy="222" r="104" stroke-width="1" stroke-opacity=".18"/>
+          </g>
+          <circle cx="316" cy="222" r="7" fill="#3fe0c0"/>
+          <circle cx="316" cy="222" r="14" fill="none" stroke="#3fe0c0" stroke-width="1.6" stroke-dasharray="3 4"/>
+          <!-- 四方标注 -->
+          <g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#bcd6e0">
+            <g>
+              <rect x="28" y="118" width="112" height="34" rx="8" fill="#0e2534" stroke="#3fe0c0" stroke-opacity=".4"/>
+              <text x="42" y="140" fill="#3fe0c0" font-weight="700">USGS</text><text x="94" y="140">美国 · 修正</text>
+            </g>
+            <g>
+              <rect x="500" y="118" width="112" height="34" rx="8" fill="#0e2534" stroke="#3fe0c0" stroke-opacity=".4"/>
+              <text x="514" y="140" fill="#3fe0c0" font-weight="700">EMSC</text><text x="566" y="140">欧洲 · 复核</text>
+            </g>
+            <g>
+              <rect x="500" y="300" width="112" height="34" rx="8" fill="#0e2534" stroke="#3fe0c0" stroke-opacity=".4"/>
+              <text x="514" y="322" fill="#3fe0c0" font-weight="700">JMA</text><text x="560" y="322">日本 · 对照</text>
+            </g>
+            <g>
+              <rect x="28" y="300" width="112" height="34" rx="8" fill="#0e2534" stroke="#3fe0c0" stroke-opacity=".4"/>
+              <text x="42" y="322" fill="#3fe0c0" font-weight="700">GS RAS</text><text x="104" y="322">俄罗斯 · 初报</text>
+            </g>
+          </g>
+          <g stroke="#3fe0c0" stroke-opacity=".38" stroke-width="1.2" stroke-dasharray="4 5" fill="none">
+            <path d="M140 135 292 210M500 135 340 210M500 317 342 236M140 317 294 234"/>
+          </g>
+          <!-- 波形条 -->
+          <g transform="translate(0,404)">
+            <rect x="0" y="0" width="640" height="56" fill="#081520" fill-opacity=".82"/>
+            <path d="M14 30h22l8-16 9 30 8-22 7 12h26l6-10 8 20 6-12h30l7-18 9 32 8-20 7 10h34l8-14 9 26 8-18 7 8h30l6-12 8 22 7-14h40l8-18 9 32 8-20h38"
+                  fill="none" stroke="#3fe0c0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <text x="14" y="48" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="9" fill="#5f7d8e">二版修正波形 · 深度 51km · 2026-11-22</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hz-hero-badge">
+        <span class="hz-live">修正完成</span>
+        <p>勘察加半岛 M7.2：四方台网震级区间收敛至 7.0–7.3，深度一致上调。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S3 焦点速报 + 视频列表 ============ -->
+<section class="hz-section" id="hzFocus" aria-labelledby="hzFocusTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Focus Report</span>
+        <h2 id="hzFocusTitle">焦点速报<span>·</span>勘察加半岛地震修正现场</h2>
+        <p class="hz-section-sub">本板块汇总美俄欧日四套监测体系对同一事件的接力修正，重点呈现震级与深度两次修订之间的差异来源，所有影像均为原创正版内容。</p>
+      </div>
+      <a class="hz-section-link" href="#hzVideo">进入视频档案 →</a>
+    </div>
+
+    <div class="hz-focus-grid">
+      <article class="hz-focus-main">
+        <div class="hz-thumb">
+          <svg viewBox="0 0 640 360" role="img" aria-label="勘察加半岛M7.2地震二版修正报告封面，含震级对照与深度重算图层">
+            <defs>
+              <linearGradient id="hzFocA" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0f2c3c"/><stop offset=".55" stop-color="#153a4a"/><stop offset="1" stop-color="#0c2130"/>
+              </linearGradient>
+              <linearGradient id="hzFocBar" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#2bb39a"/><stop offset="1" stop-color="#3fe0c0"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#hzFocA)"/>
+            <g stroke="#3fe0c0" stroke-opacity=".1" stroke-width="1">
+              <path d="M0 90h640M0 180h640M0 270h640M160 0v360M320 0v360M480 0v360"/>
+            </g>
+            <!-- 台站曲线区域 -->
+            <path d="M0 250c60 0 60-52 110-52s52 40 100 40 56-64 106-64 60 66 112 66 62-30 112-30 100 40 100 40v110H0Z"
+                  fill="#3fe0c0" fill-opacity=".1"/>
+            <path d="M0 250c60 0 60-52 110-52s52 40 100 40 56-64 106-64 60 66 112 66 62-30 112-30 100 40 100 40"
+                  fill="none" stroke="#3fe0c0" stroke-width="2.6"/>
+            <!-- 柱状对照 -->
+            <g>
+              <rect x="72" y="196" width="34" height="96" rx="5" fill="url(#hzFocBar)" opacity=".9"/>
+              <rect x="130" y="182" width="34" height="110" rx="5" fill="#3fe0c0" opacity=".55"/>
+              <rect x="188" y="206" width="34" height="86" rx="5" fill="#ffb347" opacity=".75"/>
+              <rect x="246" y="172" width="34" height="120" rx="5" fill="#3fe0c0" opacity=".4"/>
+            </g>
+            <g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="11" fill="#a9c6d2">
+              <text x="72" y="312">GS RAS</text><text x="132" y="312">USGS</text>
+              <text x="188" y="312">EMSC</text><text x="246" y="312">JMA</text>
+            </g>
+            <g font-family="PingFang SC,Microsoft YaHei,sans-serif">
+              <text x="336" y="96" font-size="15" fill="#3fe0c0" font-weight="700" letter-spacing="2">KAMCHATKA · REVISION 02</text>
+              <text x="336" y="150" font-size="58" fill="#ffffff" font-weight="800" letter-spacing="-1">M7.2</text>
+              <text x="336" y="180" font-size="14" fill="#9fb3c2">初报 M6.8 → 修正 M7.2 · 深度 38 → 51 km</text>
+              <text x="336" y="212" font-size="13" fill="#c6dbe4">震中 51.4°N / 158.1°E · 彼得罗巴甫洛夫斯克东南</text>
+              <rect x="336" y="230" width="150" height="30" rx="8" fill="#3fe0c0" fill-opacity=".16" stroke="#3fe0c0" stroke-opacity=".5"/>
+              <text x="352" y="250" font-size="12.5" fill="#3fe0c0" font-weight="600">四方台网复核通过</text>
+            </g>
+            <g transform="translate(540,60)">
+              <circle cx="0" cy="0" r="34" fill="none" stroke="#3fe0c0" stroke-opacity=".35" stroke-width="1.4"/>
+              <circle cx="0" cy="0" r="22" fill="none" stroke="#3fe0c0" stroke-opacity=".6" stroke-width="1.4"/>
+              <circle cx="0" cy="0" r="5" fill="#ffb347"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hz-focus-body">
+          <div class="hz-tagrow">
+            <span class="hz-tag">修正速报</span>
+            <span class="hz-tag is-amber">震级重算</span>
+            <span class="hz-tag is-plain">勘察加半岛</span>
+          </div>
+          <h3>四方台网接力：勘察加半岛 M7.2 为什么会从 6.8 修正而来</h3>
+          <p>初报在震后 12 分钟发出，受限于远场台站信噪比与海底路径效应，震级被低估。二版修正引入俄罗斯本地近场台站与日本、美国、欧洲三方的矩震级反演结果，把深度锁定在 51 公里，并公开了 4 组可对比的波形剪辑点。这条影像用 11 分钟讲清楚一次「看起来只是数字变化」的修正背后，究竟发生了什么。</p>
+          <div class="hz-meta">
+            <span class="hz-avatar-xs" aria-hidden="true">沈</span>
+            <span>沈砚舟 · 地震观测影像创作者</span>
+            <span>·</span>
+            <span>11 月 22 日 09:40 发布</span>
+            <span>·</span>
+            <span>12.6 万次播放</span>
+          </div>
+          <div class="hz-ops">
+            <button class="hz-op hz-js-like" type="button" data-hz-base="4820">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 22V10l5-8 1.6 1.1c.7.5 1 1.3.8 2.1L13.6 9H21l-2.6 11.2A2 2 0 0 1 16.5 22H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 22h4V10H3v12Z" stroke="currentColor" stroke-width="1.8"/></svg>
+              <span class="hz-js-like-num">4820</span>
+            </button>
+            <button class="hz-op hz-js-save" type="button">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="hz-js-save-text">收藏</span>
+            </button>
+            <button class="hz-op hz-js-share" type="button" data-hz-share="勘察加半岛 M7.2 修正速报" >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12M12 3 8 7M12 3l4 4M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>分享</span>
+            </button>
+            <button class="hz-op" type="button" data-hz-report="《四方台网接力：勘察加半岛 M7.2 为什么会从 6.8 修正而来》">纠错反馈</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="hz-vlist" id="hzVideo">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:2px">
+          <h3 style="font-size:15px;color:var(--hz-mint);letter-spacing:.06em">最新视频条目</h3>
+          <span style="font-size:12px;color:var(--hz-text-dim)">共 58 条 · 持续更新</span>
+        </div>
+
+        <article class="hz-vitem">
+          <div>
+            <h3>深度 38 公里还是 51 公里：勘察加半岛震源的三种判读</h3>
+            <p>用三条不同台站的走时曲线，演示深度修订是如何从「差不多」变成「可确认」的，附完整的修正记录表。</p>
+            <div class="hz-vmeta"><span>沈砚舟</span><span>·</span><span>16 分钟</span><span>·</span><span>8.2 万播放</span></div>
+            <div class="hz-ops">
+              <button class="hz-op hz-js-like" type="button" data-hz-base="3140">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 22V10l5-8 1.6 1.1c.7.5 1 1.3.8 2.1L13.6 9H21l-2.6 11.2A2 2 0 0 1 16.5 22H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 22h4V10H3v12Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                <span class="hz-js-like-num">3140</span>
+              </button>
+              <button class="hz-op hz-js-save" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <span class="hz-js-save-text">收藏</span>
+              </button>
+              <button class="hz-op hz-js-share" type="button" data-hz-share="深度 38 公里还是 51 公里：勘察加半岛震源的三种判读">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12M12 3 8 7M12 3l4 4M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>分享</span>
+              </button>
+            </div>
+          </div>
+          <span class="hz-vindex">01</span>
+        </article>
+
+        <article class="hz-vitem">
+          <div>
+            <h3>美方台网修正流程拆解：从自动定位到人工复核的 47 分钟</h3>
+            <p>记录一次真实的修正排队过程，包含自动算法给出的第一版结果与人工复核后的三次调整节点。</p>
+            <div class="hz-vmeta"><span>周慎行</span><span>·</span><span>13 分钟</span><span>·</span><span>6.4 万播放</span></div>
+            <div class="hz-ops">
+              <button class="hz-op hz-js-like" type="button" data-hz-base="2210">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 22V10l5-8 1.6 1.1c.7.5 1 1.3.8 2.1L13.6 9H21l-2.6 11.2A2 2 0 0 1 16.5 22H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 22h4V10H3v12Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                <span class="hz-js-like-num">2210</span>
+              </button>
+              <button class="hz-op hz-js-save" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <span class="hz-js-save-text">收藏</span>
+              </button>
+              <button class="hz-op hz-js-share" type="button" data-hz-share="美方台网修正流程拆解：从自动定位到人工复核的 47 分钟">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12M12 3 8 7M12 3l4 4M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>分享</span>
+              </button>
+            </div>
+          </div>
+          <span class="hz-vindex">02</span>
+        </article>
+
+        <article class="hz-vitem">
+          <div>
+            <h3>欧洲与日本的两份速报，为什么在深度上先分后合</h3>
+            <p>对照两份相隔 21 分钟的通报，逐项比对台站分布与频散效应带来的偏差，还原统一结论的过程。</p>
+            <div class="hz-vmeta"><span>林知遥</span><span>·</span><span>10 分钟</span><span>·</span><span>5.7 万播放</span></div>
+            <div class="hz-ops">
+              <button class="hz-op hz-js-like" type="button" data-hz-base="1980">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 22V10l5-8 1.6 1.1c.7.5 1 1.3.8 2.1L13.6 9H21l-2.6 11.2A2 2 0 0 1 16.5 22H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 22h4V10H3v12Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                <span class="hz-js-like-num">1980</span>
+              </button>
+              <button class="hz-op hz-js-save" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <span class="hz-js-save-text">收藏</span>
+              </button>
+              <button class="hz-op hz-js-share" type="button" data-hz-share="欧洲与日本的两份速报，为什么在深度上先分后合">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12M12 3 8 7M12 3l4 4M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>分享</span>
+              </button>
+            </div>
+          </div>
+          <span class="hz-vindex">03</span>
+        </article>
+
+        <article class="hz-vitem">
+          <div>
+            <h3>勘察加半岛地震频次图：为什么这里每年都有修正发生</h3>
+            <p>从板块俯冲到火山链分布，解释勘察加半岛为何成为全球修正案例最密集的区域之一。</p>
+            <div class="hz-vmeta"><span>顾长川</span><span>·</span><span>18 分钟</span><span>·</span><span>9.1 万播放</span></div>
+            <div class="hz-ops">
+              <button class="hz-op hz-js-like" type="button" data-hz-base="4060">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 22V10l5-8 1.6 1.1c.7.5 1 1.3.8 2.1L13.6 9H21l-2.6 11.2A2 2 0 0 1 16.5 22H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 22h4V10H3v12Z" stroke="currentColor" stroke-width="1.8"/></svg>
+                <span class="hz-js-like-num">4060</span>
+              </button>
+              <button class="hz-op hz-js-save" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <span class="hz-js-save-text">收藏</span>
+              </button>
+              <button class="hz-op hz-js-share" type="button" data-hz-share="勘察加半岛地震频次图：为什么这里每年都有修正发生">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12M12 3 8 7M12 3l4 4M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>分享</span>
+              </button>
+            </div>
+          </div>
+          <span class="hz-vindex">04</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 关键词解析 / 品牌深度解析（M15） ============ -->
+<section class="hz-section" id="hzArticle" aria-labelledby="hzArticleTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Deep Analysis</span>
+        <h2 id="hzArticleTitle">关键词解析<span>·</span>美俄欧日勘察加半岛地震修正</h2>
+        <p class="hz-section-sub">把这一串看似专业的名词拆开看：美、俄、欧、日代表四套监测体系，勘察加半岛是事件发生地，地震修正是动作本身。理解它们之间的关系，才能真正读懂一次速报为什么会被改写。</p>
+      </div>
+    </div>
+
+    <div class="hz-article-grid">
+      <div class="hz-article">
+        <h3>一、为什么同一场地震会出现四份不同的通报</h3>
+        <p>地震不是一个人的观测，而是一张网的结果。勘察加半岛位于太平洋板块向鄂霍次克板块俯冲的边界上，周边台站分布极不均匀：俄罗斯本地拥有近场台站，但受限于人烟稀少与气候条件，站点密度有限；美方依靠阿拉斯加与全球地震台网，距离适中、信噪比稳定；欧洲地中海区域的地震中心主要依赖远场台站，对深度的判断往往更依赖算法反演；日本气象厅则在千岛—勘察加弧上有长期积累，对同类事件的先验模型最为熟悉。</p>
+        <p>于是，同一场 <strong>美俄欧日勘察加半岛地震修正</strong> 事件会出现四条几乎同时但细节不同的通报。俄罗斯方面可能在 8 分钟内给出近场定位，美方在 20 分钟内完成自动定位与首轮人工复核，欧洲方面受时区与流程影响稍晚，日本方面则倾向于先发布震度相关信息再统一震级。观众看到的是四个数字，背后是四套完全不同的工作节奏。</p>
+        <p>我们的影像工作，就是把这四条节奏叠在同一条时间轴上。这不是为了制造冲突，而是为了让观众理解：<strong>修正不是错误，而是科学流程中正常且必要的一环</strong>。一条速报从发出到定稿，中间经历的每一次微调，都是台网对数据负责的表现。</p>
+
+        <h3>二、震级修正与深度修正，是两件不同的事</h3>
+        <p>普通观众最容易把震级和深度混为一谈。震级描述的是释放能量的大小，深度描述的是能量释放的位置。在勘察加半岛这类俯冲带事件中，深度的不确定性往往比震级更大。初报阶段，由于只有少数台站完成触发，算法倾向于给出一个「合理但保守」的深度值，比如 38 公里；当远场长周期波形加入后，深度可能被推后到 51 公里，甚至更深。</p>
+        <p>深度一变，震级的反演结果也会跟着变。这是因为震级计算需要扣除传播路径的衰减，而衰减与深度强相关。<strong>美俄欧日勘察加半岛地震修正</strong> 过程中，我们看到震级从 6.8 上调到 7.2，并不是说地震本身变强了，而是我们对它的估计更准确了。这一点如果不在视频里讲清楚，公众很容易产生「数据不靠谱」的误解。</p>
+        <div class="hz-quote">我们在拍摄中坚持一个原则：<b>不把修正简单化为「打脸」，也不把台网神化为「永远正确」</b>。修正的价值恰恰在于它展示了科学共同体的自我纠错能力，这才是值得被记录和传播的部分。</div>
+        <p>具体到操作层面，一次完整的深度修正常常包含三个动作：第一，筛选出信噪比达到阈值的台站；第二，用走时曲线拟合出多个候选深度；第三，由值班人员结合区域模型给出最终判定。这三个动作在影像里被拆成了可观察的步骤，观众可以看到每一步的输入与输出。</p>
+
+        <h3>三、四方台网的协同与分歧，如何影响公众认知</h3>
+        <p>四方协同并不意味着一方服从另一方，而是各自独立发布、彼此参照。在勘察加半岛地震修正的案例中，我们观察到一种有趣的现象：越早发布的通报，其后续被修订的概率越高；越晚发布的通报，往往越接近最终结论，但它的传播声量反而更小。这就是公众认知中的「首因效应」——人们更容易记住第一眼看到的数字。</p>
+        <p>作为一家深耕地震观测影像领域的视频企业，我们选择用「修正日志」的形式来对抗这种效应：每一条视频下方都附有完整的修正记录，标明每一次数字变化的时刻、来源与依据。这样，观众不必依赖记忆，也能看到一条结论是如何一步步走到今天的。这也是我们作为官方网站所坚持的内容品质标准。</p>
+        <p>同时，我们也注意到不同地区的观众对修正的接受度存在差异。日本观众对频繁修正较为习惯，因为本地台网密度高、更新快；欧洲观众更关注修正对建筑设防的影响；美方观众则习惯把修正与预警系统联系起来；俄罗斯本地观众更关心近场台站的实际观测能力。我们在制作内容时，会针对这些差异设计不同的解读角度，而不是用一套模板反复填充。</p>
+
+        <h3>四、从专业修正到公共表达：影像能做什么</h3>
+        <p>一份修正通报是给专业机构看的，它精确、简短、术语密集。但公共传播需要的是另一种语言：有画面、有比喻、有可感知的参照物。<strong>美俄欧日勘察加半岛地震修正</strong> 这件事，如果只用一行「深度由 38 公里修正为 51 公里」来表达，绝大多数人不会留下印象；但如果用一条山谷剖面、一组走时曲线、一段台站工作人员的操作记录来呈现，观众才会真正理解这个数字的分量。</p>
+        <p>我们在过去三年里持续运营这一内容方向，累计完成 1864 条与勘察加相关的修正影像档案。这些内容不是简单的新闻搬运，而是经过原创编排、正版授权与高清修复的精品内容。我们希望建立的是一个可持续的内容生态：专业机构提供数据，创作者提供表达，平台提供分发与归档，公众提供反馈与追问。</p>
+        <p>未来，我们还会把这一模式推广到更多俯冲带区域，让「修正」不再是一个让人焦虑的词，而是被理解为一种负责任、可追溯、值得信赖的信息生产方式。这也是我们作为行业领先的地震科普影像平台的长期使命。</p>
+
+        <div class="hz-data-strip">
+          <div class="hz-data-item"><b>1864</b><span>勘察加修正影像归档</span></div>
+          <div class="hz-data-item"><b>27</b><span>合作台网与科研机构</span></div>
+          <div class="hz-data-item"><b>51km</b><span>本次事件最终锁定深度</span></div>
+          <div class="hz-data-item"><b>4</b><span>同步对照的监测体系</span></div>
+        </div>
+      </div>
+
+      <aside class="hz-aside-card" aria-label="修正速览">
+        <h4>修正速览</h4>
+        <ul class="hz-aside-list">
+          <li><span class="hz-dot"></span><span><b>初报</b>M6.8 / 深度 38km，震后 8 分钟由近场台站触发。</span></li>
+          <li><span class="hz-dot"></span><span><b>一版修正</b>M7.0 / 深度 44km，美方自动定位加入远场长周期波形。</span></li>
+          <li><span class="hz-dot"></span><span><b>二版修正</b>M7.2 / 深度 51km，欧洲与日本复核结果收敛。</span></li>
+          <li><span class="hz-dot"></span><span><b>定稿</b>四方台网区间 7.0–7.3，深度统一为 51km。</span></li>
+          <li><span class="hz-dot"></span><span><b>可追溯</b>全部波形剪辑点与时刻表已随影像公开。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S4 专题企划 ============ -->
+<section class="hz-section" id="hzTopic" aria-labelledby="hzTopicTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Special Series</span>
+        <h2 id="hzTopicTitle">专题企划<span>·</span>跨境地震修正观察计划</h2>
+        <p class="hz-section-sub">三个正在更新的专题，围绕勘察加半岛地震修正展开，涵盖台网协同、公众沟通与创作者实践。每个专题均开放投稿与投票。</p>
+      </div>
+      <a class="hz-section-link" href="#hzSubmit">投稿报名 →</a>
+    </div>
+
+    <div class="hz-topic-grid">
+      <article class="hz-topic">
+        <div class="hz-topic-top">
+          <h3>四方台网时间轴</h3>
+          <span class="hz-topic-status">更新中</span>
+        </div>
+        <p>把美俄欧日四套通报放在同一条时间轴上，逐分钟对照发布、修订与撤稿的动作，还原一次修正的完整链路。</p>
+        <ul>
+          <li>第 12 期：勘察加 M7.2 的 47 分钟复核实录</li>
+          <li>第 11 期：远场台站如何影响深度判定</li>
+          <li>第 10 期：震级区间收敛的三种常见路径</li>
+        </ul>
+      </article>
+
+      <article class="hz-topic">
+        <div class="hz-topic-top">
+          <h3>修正日志公开课</h3>
+          <span class="hz-topic-status is-amber">开放报名</span>
+        </div>
+        <p>面向创作者与科普爱好者的系列公开课，讲解如何把一份专业通报转化为可传播的影像表达，含脚本模板与剪辑思路。</p>
+        <ul>
+          <li>第 08 讲：走时曲线的可视化方法</li>
+          <li>第 07 讲：避免渲染恐慌的叙述结构</li>
+          <li>第 06 讲：数据来源标注的规范做法</li>
+        </ul>
+      </article>
+
+      <article class="hz-topic">
+        <div class="hz-topic-top">
+          <h3>半岛影像田野</h3>
+          <span class="hz-topic-status">征集中</span>
+        </div>
+        <p>鼓励在地创作者记录勘察加半岛的地貌、火山与社区生活，用真实影像补足台网数据之外的现场感。</p>
+        <ul>
+          <li>征集方向：火山链徒步与地貌记录</li>
+          <li>征集方向：本地观测站的日常</li>
+          <li>征集方向：居民对地震的日常经验</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="hz-topic-grid" style="margin-top:20px;grid-template-columns:repeat(2,minmax(0,1fr))">
+      <article class="hz-topic">
+        <div class="hz-topic-top">
+          <h3>震源机制反演入门</h3>
+          <span class="hz-topic-status is-amber">更新中</span>
+        </div>
+        <p>从沙滩球的读法开始，解释俯冲带事件中震源机制解如何帮助判断断层类型，并与勘察加半岛的实际案例对照。</p>
+        <ul>
+          <li>第 05 期：三种断层类型的图形差异</li>
+          <li>第 04 期：反演结果不一致时怎么解读</li>
+          <li>第 03 期：与历史事件的比对方法</li>
+        </ul>
+      </article>
+      <article class="hz-topic">
+        <div class="hz-topic-top">
+          <h3>社区提问合集</h3>
+          <span class="hz-topic-status">持续更新</span>
+        </div>
+        <p>把评论区与私信里最高频的问题做成影像合集，由创作者逐条回应，形成可持续的社区问答生态。</p>
+        <ul>
+          <li>为什么修正后震级反而变大？</li>
+          <li>不同国家的震级能直接比较吗？</li>
+          <li>普通用户如何判断一条速报是否可信？</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S5 创作者矩阵（双列简介） ============ -->
+<section class="hz-section" id="hzAuthor" aria-labelledby="hzAuthorTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Creators</span>
+        <h2 id="hzAuthorTitle">创作者矩阵<span>·</span>记录修正的人</h2>
+        <p class="hz-section-sub">他们既是观测记录者，也是内容生态的共建者。每一位创作者都经过实名与专业背景核验，持续为社区提供原创、真实、可核对的影像内容。</p>
+      </div>
+    </div>
+
+    <div class="hz-author-grid">
+      <article class="hz-author">
+        <div class="hz-avatar">
+          <svg viewBox="0 0 64 64" role="img" aria-label="创作者沈砚舟的首字圆形头像">
+            <rect width="64" height="64" fill="#123243"/>
+            <circle cx="32" cy="26" r="11" fill="#3fe0c0" fill-opacity=".85"/>
+            <path d="M12 58c3-12 11-17 20-17s17 5 20 17Z" fill="#3fe0c0" fill-opacity=".5"/>
+            <text x="32" y="59" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" fill="#eaf7fb" font-weight="700">沈</text>
+          </svg>
+        </div>
+        <div>
+          <h3>沈砚舟</h3>
+          <div class="hz-author-role">地震观测影像 · 速报复核方向</div>
+          <p>前地震台站观测员，现专注地震速报复核类影像创作。擅长把复杂的走时曲线拆成逐帧可读的画面，坚持每条结论都附数据出处，作品以冷静、克制、信息密度高著称。</p>
+          <div class="hz-author-stats"><span>作品 <b>128</b></span><span>粉丝 <b>24.6 万</b></span><span>收藏 <b>9.8 万</b></span></div>
+          <button class="hz-author-more hz-js-author" type="button" data-hz-author="沈砚舟|地震观测影像创作者，前地震台站观测员。累计发布勘察加半岛地震修正影像 128 条，代表作《四方台网接力》系列播放量超过 300 万，长期参与社区纠错与数据核对工作。">查看创作者档案 →</button>
+        </div>
+      </article>
+
+      <article class="hz-author">
+        <div class="hz-avatar">
+          <svg viewBox="0 0 64 64" role="img" aria-label="创作者周慎行的几何拼贴头像">
+            <rect width="64" height="64" fill="#1a2c3d"/>
+            <rect x="10" y="34" width="12" height="24" rx="3" fill="#ffb347" fill-opacity=".85"/>
+            <rect x="26" y="20" width="12" height="38" rx="3" fill="#3fe0c0" fill-opacity=".7"/>
+            <rect x="42" y="28" width="12" height="30" rx="3" fill="#3fe0c0" fill-opacity=".4"/>
+            <circle cx="32" cy="14" r="6" fill="#ffb347" fill-opacity=".8"/>
+          </svg>
+        </div>
+        <div>
+          <h3>周慎行</h3>
+          <div class="hz-author-role">台网流程 · 数据处理方向</div>
+          <p>数据工程背景，专注记录自动定位与人工复核之间的接口环节。擅长用流程图和时间戳呈现「看不见的工作」，为观众补齐速报背后的操作细节，内容以实用、可复现见长。</p>
+          <div class="hz-author-stats"><span>作品 <b>96</b></span><span>粉丝 <b>18.2 万</b></span><span>收藏 <b>6.4 万</b></span></div>
+          <button class="hz-author-more hz-js-author" type="button" data-hz-author="周慎行|台网流程影像创作者，数据工程背景。专注自动定位与人工复核环节的记录，代表作《47 分钟》系列被多家科普社区引用，主张用可复现的流程讲解替代结论式灌输。">查看创作者档案 →</button>
+        </div>
+      </article>
+
+      <article class="hz-author">
+        <div class="hz-avatar">
+          <svg viewBox="0 0 64 64" role="img" aria-label="创作者林知遥的波纹线条头像">
+            <rect width="64" height="64" fill="#102b35"/>
+            <g fill="none" stroke="#3fe0c0" stroke-width="2">
+              <path d="M6 40c8 0 8-14 16-14s8 14 16 14 8-12 16-12 6 6 8 6" stroke-opacity=".9"/>
+              <path d="M6 48c8 0 8-10 16-10s8 10 16 10 8-8 16-8 6 4 8 4" stroke-opacity=".5"/>
+              <path d="M6 32c8 0 8-18 16-18s8 18 16 18 8-14 16-14 6 8 8 8" stroke-opacity=".35"/>
+            </g>
+            <circle cx="32" cy="20" r="5" fill="#ffb347"/>
+          </svg>
+        </div>
+        <div>
+          <h3>林知遥</h3>
+          <div class="hz-author-role">跨境对照 · 科普表达方向</div>
+          <p>科学传播专业出身，擅长把不同地区的通报差异转化为易读的对照影像。她的内容强调「不制造对立」，以温和、清晰的叙述帮助公众理解修正的必要性，社区口碑稳定。</p>
+          <div class="hz-author-stats"><span>作品 <b>74</b></span><span>粉丝 <b>15.9 万</b></span><span>收藏 <b>5.1 万</b></span></div>
+          <button class="hz-author-more hz-js-author" type="button" data-hz-author="林知遥|跨境地震对照影像创作者，科学传播专业。擅长以对照表格与并行影像呈现四方通报差异，主张不制造对立、不渲染恐慌，长期担任社区问答栏目的常驻解答者。">查看创作者档案 →</button>
+        </div>
+      </article>
+
+      <article class="hz-author">
+        <div class="hz-avatar">
+          <svg viewBox="0 0 64 64" role="img" aria-label="创作者顾长川的地形剖面头像">
+            <rect width="64" height="64" fill="#152639"/>
+            <path d="M0 50 14 32l10 10 8-16 10 20 8-8 14 12v6H0Z" fill="#3fe0c0" fill-opacity=".45"/>
+            <path d="M0 56 14 40l10 8 8-12 10 16 8-6 14 10v8H0Z" fill="#3fe0c0" fill-opacity=".75"/>
+            <circle cx="46" cy="18" r="6" fill="#ffb347" fill-opacity=".9"/>
+            <path d="M6 26h52" stroke="#9fb3c2" stroke-opacity=".35" stroke-width="1.4"/>
+          </svg>
+        </div>
+        <div>
+          <h3>顾长川</h3>
+          <div class="hz-author-role">地貌与构造 · 户外记录方向</div>
+          <p>户外记录者与地质爱好者，长期在勘察加半岛周边进行地貌拍摄。他的影像把台网数据与真实地形放在一起，让观众看见数字背后的山谷、火山与海岸线，作品质感扎实。</p>
+          <div class="hz-author-stats"><span>作品 <b>112</b></span><span>粉丝 <b>21.3 万</b></span><span>收藏 <b>7.6 万</b></span></div>
+          <button class="hz-author-more hz-js-author" type="button" data-hz-author="顾长川|地貌与构造影像创作者，户外记录者。长期在勘察加半岛周边拍摄地形剖面与火山链，代表作《半岛频次图》系列把台网数据与实地地貌并置呈现，播放量超过 420 万。">查看创作者档案 →</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 数据榜单（M14） ============ -->
+<section class="hz-section" id="hzRank" aria-labelledby="hzRankTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Ranking</span>
+        <h2 id="hzRankTitle">数据榜单<span>·</span>社区热度与口碑一览</h2>
+        <p class="hz-section-sub">榜单每周更新，综合播放、收藏、纠错采纳与社区投票四项指标，为创作者提供可参考的反馈，也为新观众提供内容入口。</p>
+      </div>
+    </div>
+
+    <div class="hz-rank">
+      <div class="hz-rank-col">
+        <h3>热度榜</h3>
+        <ol>
+          <li><span>四方台网接力：勘察加 M7.2 为何修正</span><em>12.6万</em></li>
+          <li><span>深度 38 还是 51 公里</span><em>8.2万</em></li>
+          <li><span>勘察加半岛地震频次图</span><em>9.1万</em></li>
+          <li><span>美方台网 47 分钟复核实录</span><em>6.4万</em></li>
+          <li><span>欧洲与日本速报深度对照</span><em>5.7万</em></li>
+          <li><span>震源机制入门：三种断层</span><em>4.9万</em></li>
+        </ol>
+      </div>
+      <div class="hz-rank-col">
+        <h3>新人榜</h3>
+        <ol>
+          <li><span>叶疏桐 · 社区问答合集</span><em>新人+</em></li>
+          <li><span>秦望山 · 海岸线观测日记</span><em>新人+</em></li>
+          <li><span>苏见微 · 修正名词小词典</span><em>新人+</em></li>
+          <li><span>白鹭洲 · 台站的一天</span><em>新人+</em></li>
+          <li><span>何可为 · 波形动画实验</span><em>新人+</em></li>
+        </ol>
+      </div>
+      <div class="hz-rank-col">
+        <h3>口碑榜</h3>
+        <ol>
+          <li><span>修正日志公开课</span><em>9.7</em></li>
+          <li><span>半岛影像田野征集</span><em>9.5</em></li>
+          <li><span>震源机制反演入门</span><em>9.4</em></li>
+          <li><span>社区提问合集</span><em>9.2</em></li>
+          <li><span>四方台网时间轴</span><em>9.1</em></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S6 社区口碑（双列短评） ============ -->
+<section class="hz-section" id="hzReview" aria-labelledby="hzReviewTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Community</span>
+        <h2 id="hzReviewTitle">社区口碑<span>·</span>观众如何评价这些修正影像</h2>
+        <p class="hz-section-sub">来自不同背景的观众留下了各自的观察。有专业视角的补充，也有普通观众的疑问，它们共同构成了这个内容社区的真实温度。</p>
+      </div>
+    </div>
+
+    <div class="hz-review-grid">
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#3fe0c0" aria-hidden="true">陆</span>
+          <span class="hz-review-name">陆行舟</span>
+          <span class="hz-review-when">11 月 22 日</span>
+        </div>
+        <p>作为在防灾部门工作的人，这条片子把「修正」讲得很干净。最难得的是没有把初报说成错误，而是说成流程中的一步，这个分寸把握得非常好。</p>
+        <div class="hz-review-tags"><span>专业视角</span><span>表述克制</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#ffb347" aria-hidden="true">许</span>
+          <span class="hz-review-name">许知微</span>
+          <span class="hz-review-when">11 月 21 日</span>
+        </div>
+        <p>以前完全分不清震级和深度的区别，看完那个 38 还是 51 公里的视频，第一次明白为什么数字会变。希望能多做一些这样的入门内容，家里老人也看得懂。</p>
+        <div class="hz-review-tags"><span>入门友好</span><span>家庭观看</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#7fb7ff" aria-hidden="true">方</span>
+          <span class="hz-review-name">方寸山</span>
+          <span class="hz-review-when">11 月 20 日</span>
+        </div>
+        <p>提醒一点：视频里引用的欧洲通报时间戳，和我在别处看到的相差两分钟。虽然不影响结论，但如果能补一条说明会更严谨。已经把具体位置通过纠错按钮提交了。</p>
+        <div class="hz-review-tags"><span>细节纠错</span><span>建设性</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#8be0a5" aria-hidden="true">曾</span>
+          <span class="hz-review-name">曾照野</span>
+          <span class="hz-review-when">11 月 19 日</span>
+        </div>
+        <p>收藏了整套四方台网时间轴。做地理社团的分享时直接用上了，同学们对那张把四份通报叠在一起的图印象很深。感谢创作者愿意公开可追溯的记录。</p>
+        <div class="hz-review-tags"><span>教育使用</span><span>收藏</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#e0c3ff" aria-hidden="true">黎</span>
+          <span class="hz-review-name">黎小满</span>
+          <span class="hz-review-when">11 月 18 日</span>
+        </div>
+        <p>画面很舒服，没有那种刻意制造紧张的配乐，这点很加分。我看这类内容最怕被吓到，但这条片子让我觉得地震研究是一件踏实的事，有被安慰到。</p>
+        <div class="hz-review-tags"><span>影像质感</span><span>治愈</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#ffd27f" aria-hidden="true">邱</span>
+          <span class="hz-review-name">邱野</span>
+          <span class="hz-review-when">11 月 17 日</span>
+        </div>
+        <p>希望后面能加上台站的具体编号，做课程作业时需要引用。整体信息密度很高，十分钟能讲清楚这么多内容不容易，会继续追更这个专题。</p>
+        <div class="hz-review-tags"><span>需求建议</span><span>追更</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#9fe3ff" aria-hidden="true">简</span>
+          <span class="hz-review-name">简流年</span>
+          <span class="hz-review-when">11 月 16 日</span>
+        </div>
+        <p>从半岛影像田野那个征集过来的，没想到一个地震科普平台能把地貌拍得这么好看。第五期的火山链段落我反复看了三遍，构图和讲解都很舒服。</p>
+        <div class="hz-review-tags"><span>专题推荐</span><span>影像美学</span></div>
+      </article>
+
+      <article class="hz-review">
+        <div class="hz-review-head">
+          <span class="hz-avatar-xs" style="background:#b6f5de" aria-hidden="true">宋</span>
+          <span class="hz-review-name">宋砚秋</span>
+          <span class="hz-review-when">11 月 15 日</span>
+        </div>
+        <p>英语不太好，看国外台网的原通报很吃力，这里的对照讲解省了很多时间。希望有一天能做一版纯数据的速览页，方便我们这种从业者快速核对。</p>
+        <div class="hz-review-tags"><span>实用需求</span><span>跨境对照</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 企业动态 + 合作墙 ============ -->
+<section class="hz-section" id="hzNews" aria-labelledby="hzNewsTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">News &amp; Partners</span>
+        <h2 id="hzNewsTitle">企业动态<span>·</span>与合作伙伴共建内容生态</h2>
+        <p class="hz-section-sub">官方发布的品牌资讯、内容更新与合作进展。我们与多家观测机构、科研单位保持长期协作，共同维护内容品质与数据来源的可靠性。</p>
+      </div>
+    </div>
+
+    <ul class="hz-newslist">
+      <li>
+        <span class="hz-news-date">2026 / 11 / 22</span>
+        <div>
+          <h3>勘察加半岛 M7.2 修正速报二版影像正式上线</h3>
+          <p>新增四方台网波形剪辑点与深度重算流程，全片 11 分钟，支持高清下载与引用标注。</p>
+        </div>
+        <span class="hz-news-cat">官方发布</span>
+      </li>
+      <li>
+        <span class="hz-news-date">2026 / 11 / 18</span>
+        <div>
+          <h3>「修正日志公开课」第 08 讲开放报名</h3>
+          <p>本期聚焦走时曲线可视化，报名后可获得脚本模板与配套数据表，名额 300 人。</p>
+        </div>
+        <span class="hz-news-cat">活动报名</span>
+      </li>
+      <li>
+        <span class="hz-news-date">2026 / 11 / 12</span>
+        <div>
+          <h3>与两家区域观测机构完成内容协作签约</h3>
+          <p>合作范围覆盖勘察加半岛周边台站数据授权与联合选题，进一步提升内容可追溯性。</p>
+        </div>
+        <span class="hz-news-cat">合作进展</span>
+      </li>
+      <li>
+        <span class="hz-news-date">2026 / 11 / 05</span>
+        <div>
+          <h3>社区纠错机制升级：采纳结果全量公示</h3>
+          <p>所有经核实的纠错建议将在对应视频下公开展示，并被标注在内容更新日志中。</p>
+        </div>
+        <span class="hz-news-cat">产品更新</span>
+      </li>
+      <li>
+        <span class="hz-news-date">2026 / 10 / 28</span>
+        <div>
+          <h3>勘察加相关内容归档突破 1800 条</h3>
+          <p>平台完成一轮全量检索优化，历史修正影像的检索命中率提升至 96%。</p>
+        </div>
+        <span class="hz-news-cat">内容里程碑</span>
+      </li>
+    </ul>
+
+    <div style="margin-top:32px">
+      <h3 style="font-size:15px;color:var(--hz-mint);letter-spacing:.08em;margin-bottom:14px">合作伙伴</h3>
+      <div class="hz-partners">
+        <div class="hz-partner"><b>北太平洋观测联盟</b><span>近场台站数据支持</span></div>
+        <div class="hz-partner"><b>极地地质研究室</b><span>构造模型与审校</span></div>
+        <div class="hz-partner"><b>环太平洋科普协作组</b><span>联合选题与分发</span></div>
+        <div class="hz-partner"><b>半岛影像档案计划</b><span>实地拍摄与授权</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 FAQ ============ -->
+<section class="hz-section" id="hzFaq" aria-labelledby="hzFaqTitle">
+  <div class="hz-shell">
+    <div class="hz-section-head">
+      <div>
+        <span class="hz-section-kicker">Help Center</span>
+        <h2 id="hzFaqTitle">帮助中心<span>·</span>关于修正影像的常见问题</h2>
+        <p class="hz-section-sub">如果你对内容来源、数据引用或投稿流程有疑问，可以先在这里找答案。未解决的问题可通过投稿与反馈入口联系我们。</p>
+      </div>
+    </div>
+
+    <div class="hz-faq">
+      <details>
+        <summary>为什么同一次地震会有多个不同的震级？</summary>
+        <div class="hz-faq-body">不同监测体系使用的台站组合、频带范围与反演方法不同，得到的震级会出现合理差异。勘察加半岛地震修正的案例中，四方台网最终收敛到 7.0–7.3 区间，属于正常的一致性范围，并非某一方出错。</div>
+      </details>
+      <details>
+        <summary>修正后的数据会覆盖原来的数据吗？</summary>
+        <div class="hz-faq-body">不会。我们保留每一次发布的完整记录，并在视频下方以修正日志的形式呈现。观众可以看到初报、一版、二版直到定稿的全过程，这正是我们强调可追溯的原因。</div>
+      </details>
+      <details>
+        <summary>视频中的数据可以直接用于论文或报道引用吗？</summary>
+        <div class="hz-faq-body">可以引用，但请同时标注原始数据来源与我们的整理时间。我们提供的所有影像均为正版授权内容，引用时建议附上对应视频的标题与发布时间，方便读者核对。</div>
+      </details>
+      <details>
+        <summary>发现内容有误，怎么提交纠错？</summary>
+        <div class="hz-faq-body">每条视频下方都有「纠错反馈」入口，填写具体的时间点与问题说明即可。经核实的建议会在对应内容下公开展示，并计入更新日志。</div>
+      </details>
+      <details>
+        <summary>投稿需要具备专业背景吗？</summary>
+        <div class="hz-faq-body">不需要。我们更看重内容是否具体、真实、有依据。专业向与入门向的选题都在征集范围内，但涉及数据的内容我们会安排审校协作。</div>
+      </details>
+      <details>
+        <summary>为什么平台特别关注勘察加半岛？</summary>
+        <div class="hz-faq-body">勘察加半岛位于太平洋板块俯冲边界，地震活动频繁且台站分布特殊，是研究跨境地震修正的理想样本区域。我们以此为长期观察对象，也希望把方法推广到更多区域。</div>
+      </details>
+      <details>
+        <summary>收藏和点赞的数据会保存多久？</summary>
+        <div class="hz-faq-body">在当前浏览会话中保持实时更新。我们会在后续版本中提供个人内容清单，届时收藏记录可长期保存。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ S7 投稿与联系（M13） ============ -->
+<section class="hz-section" id="hzSubmit" aria-labelledby="hzSubmitTitle">
+  <div class="hz-shell">
+    <div class="hz-cta">
+      <div>
+        <h2 id="hzSubmitTitle">把你的修正观察，交给更多人看见</h2>
+        <p>无论你是在地记录者、数据工作者，还是刚入门的科普爱好者，只要你的内容具体、真实、有依据，我们都欢迎。投稿通过审校后将进入内容生态的正式发布流程，并获得高清归档与版权标注支持。</p>
+      </div>
+      <div class="hz-cta-actions">
+        <button class="hz-btn hz-btn-primary hz-js-submit" type="button">我要投稿</button>
+        <button class="hz-btn hz-btn-ghost hz-js-report" type="button" data-hz-report="整体内容与功能反馈">问题反馈</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ S8 页脚 ============ -->
+<footer class="hz-footer">
+  <div class="hz-shell">
+    <div class="hz-footer-grid">
+      <div>
+        <h4>寰震影像 · 官方网站</h4>
+        <p>深耕地震观测与速报复核视频领域的原创内容企业，围绕美俄欧日勘察加半岛地震修正建立可追溯的影像档案。我们以专业、品质、真实为准绳，持续运营面向公众与机构的内容平台，值得信赖。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <div class="hz-footer-links">
+          <a href="#hzFocus">焦点速报</a>
+          <a href="#hzVideo">视频档案</a>
+          <a href="#hzArticle">关键词解析</a>
+          <a href="#hzTopic">专题企划</a>
+          <a href="#hzAuthor">创作者矩阵</a>
+        </div>
+      </div>
+      <div>
+        <h4>社区与帮助</h4>
+        <div class="hz-footer-links">
+          <a href="#hzRank">数据榜单</a>
+          <a href="#hzReview">社区口碑</a>
+          <a href="#hzNews">企业动态</a>
+          <a href="#hzFaq">帮助中心</a>
+          <a href="#hzSubmit">投稿报名</a>
+        </div>
+      </div>
+      <div>
+        <h4>联系与协作</h4>
+        <p>内容协作：edit@globalquakevision.example<br>媒体联络：press@globalquakevision.example<br>办公地址：勘察加内容制作中心（远程协作制）</p>
+      </div>
+    </div>
+    <div class="hz-footer-bottom">
+      <span>© 2026 寰震影像 官方网站 · 版权所有 · 持续运营中</span>
+      <span class="hz-legal">
+        <span>内容均为原创正版 · 高清归档</span>
+        <span>备案号：黑ICP备2026000000号</span>
+        <span>品牌合规 · 用户至上</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<a class="hz-top" id="hzBackTop" href="#hzTop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M12 5l-6 6M12 5l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<div class="hz-toast" id="hzToast" role="status" aria-live="polite"></div>
+
+<!-- 分享弹窗 -->
+<div class="hz-modal" id="hzShareModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="分享内容">
+  <div class="hz-modal-panel hz-modal-rel">
+    <button class="hz-close" type="button" data-hz-close aria-label="关闭">×</button>
+    <h3>分享这条修正影像</h3>
+    <p class="hz-modal-sub" id="hzShareTitle">勘察加半岛地震修正影像</p>
+    <div class="hz-share-row">
+      <button class="hz-share-btn" type="button" data-hz-share-to="微信">微信</button>
+      <button class="hz-share-btn" type="button" data-hz-share-to="微博">微博</button>
+      <button class="hz-share-btn" type="button" data-hz-share-to="QQ">QQ</button>
+    </div>
+    <div class="hz-modal-actions">
+      <button class="hz-btn hz-btn-ghost" type="button" data-hz-copy>复制链接</button>
+      <button class="hz-btn hz-btn-primary" type="button" data-hz-close>完成</button>
+    </div>
+  </div>
+</div>
+
+<!-- 纠错 / 反馈弹窗 -->
+<div class="hz-modal" id="hzReportModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="纠错与反馈">
+  <div class="hz-modal-panel hz-modal-rel">
+    <button class="hz-close" type="button" data-hz-close aria-label="关闭">×</button>
+    <h3>纠错与反馈</h3>
+    <p class="hz-modal-sub" id="hzReportTarget">请描述你发现的问题</p>
+    <form id="hzReportForm">
+      <div class="hz-field">
+        <label for="hzReportType">问题类型</label>
+        <select id="hzReportType">
+          <option>数据或时间戳有误</option>
+          <option>来源标注不完整</option>
+          <option>表达可能引发误解</option>
+          <option>功能使用问题</option>
+          <option>其他建议</option>
+        </select>
+      </div>
+      <div class="hz-field">
+        <label for="hzReportText">具体说明</label>
+        <textarea id="hzReportText" placeholder="请尽量写清时间点、原文表述与你认为正确的信息" required></textarea>
+      </div>
+      <div class="hz-modal-actions">
+        <button class="hz-btn hz-btn-ghost" type="button" data-hz-close>取消</button>
+        <button class="hz-btn hz-btn-primary" type="submit">提交反馈</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 投稿弹窗 -->
+<div class="hz-modal" id="hzSubmitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="投稿报名">
+  <div class="hz-modal-panel hz-modal-rel">
+    <button class="hz-close" type="button" data-hz-close aria-label="关闭">×</button>
+    <h3>投稿报名</h3>
+    <p class="hz-modal-sub">填写基本信息，审校团队将在 3 个工作日内与你联系。</p>
+    <form id="hzSubmitForm">
+      <div class="hz-field">
+        <label for="hzSubmitName">创作者昵称</label>
+        <input id="hzSubmitName" type="text" placeholder="例如：沈砚舟" required>
+      </div>
+      <div class="hz-field">
+        <label for="hzSubmitTopic">选题方向</label>
+        <select id="hzSubmitTopic">
+          <option>四方台网时间轴</option>
+          <option>修正日志公开课</option>
+          <option>半岛影像田野</option>
+          <option>震源机制反演入门</option>
+          <option>社区提问合集</option>
+        </select>
+      </div>
+      <div class="hz-field">
+        <label for="hzSubmitDesc">内容简介</label>
+        <textarea id="hzSubmitDesc" placeholder="简要说明影像内容、数据来源与时长" required></textarea>
+      </div>
+      <div class="hz-modal-actions">
+        <button class="hz-btn hz-btn-ghost" type="button" data-hz-close>取消</button>
+        <button class="hz-btn hz-btn-primary" type="submit">提交报名</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 作者档案弹窗 -->
+<div class="hz-modal" id="hzAuthorModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="创作者档案">
+  <div class="hz-modal-panel hz-modal-rel">
+    <button class="hz-close" type="button" data-hz-close aria-label="关闭">×</button>
+    <h3 id="hzAuthorName">创作者档案</h3>
+    <p class="hz-modal-sub" id="hzAuthorIntro">创作者简介</p>
+    <p style="font-size:13.5px;color:var(--hz-text-dim);line-height:1.8">该创作者长期参与勘察加半岛地震修正相关内容的制作，所有作品均经过数据来源核对。如需与其合作或引用作品，请通过投稿与联系入口留言，我们会在两个工作日内转达。</p>
+    <div class="hz-modal-actions">
+      <button class="hz-btn hz-btn-ghost" type="button" data-hz-close>关闭</button>
+      <button class="hz-btn hz-btn-primary" type="button" data-hz-follow>关注创作者</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, c){ return (c||document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ---------- Toast ---------- */
+  var toastEl = $("#hzToast");
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-show"); }, 2400);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = $("#hzBurger");
+  var mnav = $("#hzMobileNav");
+  if(burger && mnav){
+    burger.addEventListener("click", function(){
+      var open = mnav.classList.toggle("is-open");
+      burger.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "收起移动端导航" : "展开移动端导航");
+    });
+    $$("a", mnav).forEach(function(a){
+      a.addEventListener("click", function(){
+        mnav.classList.remove("is-open");
+        burger.classList.remove("is-open");
+        burger.setAttribute("aria-expanded","false");
+      });
+    });
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = $("#hzSearchInput");
+  var searchBtn = $("#hzSearchBtn");
+  var searchFb = $("#hzSearchFeedback");
+  var searchIndex = [
+    "四方台网接力：勘察加 M7.2 修正速报",
+    "深度 38 公里还是 51 公里：震源判读",
+    "美方台网修正流程：47 分钟复核",
+    "欧洲与日本速报深度对照",
+    "勘察加半岛地震频次图",
+    "震源机制反演入门",
+    "修正日志公开课 第 08 讲",
+    "半岛影像田野征集",
+    "创作者 沈砚舟 档案",
+    "创作者 顾长川 档案"
+  ];
+  function runSearch(){
+    if(!searchFb) return;
+    var q = (searchInput && searchInput.value || "").trim();
+    if(!q){
+      searchFb.innerHTML = "输入关键词试试，例如 <b>修正</b>、<b>深度</b>、<b>台网</b> 或创作者昵称。";
+      searchFb.classList.add("is-open");
+      return;
+    }
+    var hits = searchIndex.filter(function(t){ return t.toLowerCase().indexOf(q.toLowerCase()) > -1; });
+    if(hits.length){
+      searchFb.innerHTML = "找到 <b>" + hits.length + "</b> 条相关内容：<br>" +
+        hits.slice(0,4).map(function(h){ return "· " + h; }).join("<br>");
+    } else {
+      searchFb.innerHTML = "暂未匹配到「<b>" + q.replace(/[<>&]/g,"") + "</b>」的相关内容，可尝试「修正」「台网」「勘察加」或前往帮助中心。";
+    }
+    searchFb.classList.add("is-open");
+  }
+  if(searchBtn) searchBtn.addEventListener("click", runSearch);
+  if(searchInput){
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); runSearch(); }
+    });
+    searchInput.addEventListener("input", function(){
+      if(!searchInput.value.trim() && searchFb){ searchFb.classList.remove("is-open"); }
+    });
+  }
+  document.addEventListener("click", function(e){
+    if(searchFb && !e.target.closest(".hz-search")) searchFb.classList.remove("is-open");
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  $$(".hz-js-like").forEach(function(btn){
+    var numEl = $(".hz-js-like-num", btn);
+    var base = parseInt(btn.getAttribute("data-hz-base") || (numEl ? numEl.textContent : "0"), 10) || 0;
+    var liked = false;
+    if(numEl) numEl.textContent = String(base);
+    btn.addEventListener("click", function(){
+      liked = !liked;
+      btn.classList.toggle("is-liked", liked);
+      if(numEl) numEl.textContent = String(base + (liked ? 1 : 0));
+      toast(liked ? "已点赞，感谢你的支持" : "已取消点赞");
+    });
+  });
+
+  $$(".hz-js-save").forEach(function(btn){
+    var txt = $(".hz-js-save-text", btn);
+    var saved = false;
+    function paint(){
+      btn.classList.toggle("is-saved", saved);
+      if(txt) txt.textContent = saved ? "已收藏" : "收藏";
+      var svg = btn.querySelector("svg path");
+      if(svg) svg.setAttribute("fill", saved ? "currentColor" : "none");
+    }
+    btn.addEventListener("click", function(){
+      saved = !saved;
+      paint();
+      toast(saved ? "已加入收藏清单" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 弹窗基础 ---------- */
+  var lastFocus = null;
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(!m) return;
+    lastFocus = document.activeElement;
+    m.classList.add("is-open");
+    m.setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+    var first = m.querySelector("input, textarea, select, button");
+    if(first) setTimeout(function(){ first.focus(); }, 40);
+  }
+  function closeModal(m){
+    if(!m) return;
+    m.classList.remove("is-open");
+    m.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  $$(".hz-modal").forEach(function(m){
+    m.addEventListener("click", function(e){
+      if(e.target === m) closeModal(m);
+    });
+    $$("[data-hz-close]", m).forEach(function(b){
+      b.addEventListener("click", function(){ closeModal(m); });
+    });
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      $$(".hz-modal.is-open").forEach(closeModal);
+    }
+  });
+
+  /* ---------- 分享 ---------- */
+  var shareModal = $("#hzShareModal");
+  var shareTitleEl = $("#hzShareTitle");
+  var currentShare = "勘察加半岛地震修正影像";
+  $$(".hz-js-share").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      currentShare = btn.getAttribute("data-hz-share") || currentShare;
+      if(shareTitleEl) shareTitleEl.textContent = currentShare;
+      openModal("hzShareModal");
+    });
+  });
+  $$("[data-hz-share-to]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var to = btn.getAttribute("data-hz-share-to");
+      toast("已生成" + to + "分享卡片，可直接转发");
+    });
+  });
+  $$("[data-hz-copy]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var text = currentShare + " — 寰震影像官方网站";
+      function done(){ toast("链接已复制到剪贴板"); }
+      function fail(){ toast("当前浏览器不支持自动复制，请手动复制标题"); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(fail);
+      } else {
+        try{
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          done();
+        }catch(err){ fail(); }
+      }
+    });
+  });
+
+  /* ---------- 纠错 / 反馈 ---------- */
+  var reportTargetEl = $("#hzReportTarget");
+  var currentReport = "整体内容与功能反馈";
+  function openReport(name){
+    currentReport = name || currentReport;
+    if(reportTargetEl) reportTargetEl.textContent = "反馈对象：" + currentReport;
+    openModal("hzReportModal");
+  }
+  $$("[data-hz-report]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      openReport(btn.getAttribute("data-hz-report"));
+    });
+  });
+  $$(".hz-js-report").forEach(function(btn){
+    btn.addEventListener("click", function(){ openReport("整体内容与功能反馈"); });
+  });
+  var reportForm = $("#hzReportForm");
+  if(reportForm){
+    reportForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var txt = $("#hzReportText");
+      if(txt && !txt.value.trim()){ toast("请填写具体说明"); return; }
+      closeModal($("#hzReportModal"));
+      reportForm.reset();
+      toast("反馈已提交，审校团队会尽快核实");
+    });
+  }
+
+  /* ---------- 投稿 ---------- */
+  $$(".hz-js-submit").forEach(function(btn){
+    btn.addEventListener("click", function(){ openModal("hzSubmitModal"); });
+  });
+  var submitForm = $("#hzSubmitForm");
+  if(submitForm){
+    submitForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var name = $("#hzSubmitName");
+      var desc = $("#hzSubmitDesc");
+      if(name && !name.value.trim()){ toast("请填写创作者昵称"); return; }
+      if(desc && !desc.value.trim()){ toast("请填写内容简介"); return; }
+      closeModal($("#hzSubmitModal"));
+      submitForm.reset();
+      toast("投稿报名已收到，我们会在 3 个工作日内联系你");
+    });
+  }
+
+  /* ---------- 作者弹窗 ---------- */
+  var authorNameEl = $("#hzAuthorName");
+  var authorIntroEl = $("#hzAuthorIntro");
+  $$(".hz-js-author").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var raw = btn.getAttribute("data-hz-author") || "";
+      var parts = raw.split("|");
+      if(authorNameEl) authorNameEl.textContent = parts[0] || "创作者档案";
+      if(authorIntroEl) authorIntroEl.textContent = parts[1] || "创作者简介";
+      openModal("hzAuthorModal");
+    });
+  });
+  $$("[data-hz-follow]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var m = btn.closest(".hz-modal");
+      closeModal(m);
+      toast("已关注该创作者");
+    });
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var backTop = $("#hzBackTop");
+  function onScroll(){
+    if(!backTop) return;
+    if(window.scrollY > 520) backTop.classList.add("is-show");
+    else backTop.classList.remove("is-show");
+  }
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+  if(backTop){
+    backTop.addEventListener("click", function(e){
+      e.preventDefault();
+      window.scrollTo({ top:0, behavior:"smooth" });
+    });
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = $$("[data-hz-count]");
+  function animateCount(el){
+    var target = parseInt(el.getAttribute("data-hz-count"), 10) || 0;
+    var small = el.querySelector("small");
+    var suffix = small ? small.outerHTML : "";
+    var start = 0, dur = 1100, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(start + (target - start) * eased);
+      el.innerHTML = val + suffix;
+      if(p < 1) requestAnimationFrame(step);
+      else el.innerHTML = target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  if("IntersectionObserver" in window && counters.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold:.4 });
+    counters.forEach(function(c){ io.observe(c); });
+  }
+})();
+</script>
+</body>
+  </html>
